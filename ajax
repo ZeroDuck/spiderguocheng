@@ -1,5 +1,8 @@
+
 from urllib.parse import urlencode
 import requests
+
+# 基础的网页，利用基础网页加尾部可以做到连续抓取几页
 
 base_url = 'https://m.weibo.cn/api/container/getIndex?'
 
@@ -10,7 +13,6 @@ headers = {
                   'Chrome/81.0.4044.138 Safari/537.36 ',
     'X-Requested-With': 'XMLHttpRequest'
 }
-
 
 def get_page(page):
     param = {
@@ -27,9 +29,7 @@ def get_page(page):
     except requests.ConnectionError as e:
         print('Error', e.args)
 
-
-from pyquery import PyQuery as pq
-
+#  分析网页数据，提取有用信息
 
 def parse_page(json):
     if json:
