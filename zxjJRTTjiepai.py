@@ -1,9 +1,9 @@
 """
-
-uft-8
 仅供测试
 学习爬虫
 
+uft-8
+author:ZXJ(zero)
 version：1.0
 该版本不能抓取json的图片，只能从image_list中的网页提取图片
 该版本还存在着image的TypeError现象，并没有修正只是利用try让其跳过
